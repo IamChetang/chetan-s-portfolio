@@ -13,7 +13,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React with chetan and pooja
+          Learn React with rakesh
         </a>
       </header>
     </div>
