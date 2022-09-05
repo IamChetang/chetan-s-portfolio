@@ -1,22 +1,20 @@
-import "./App.css";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Main from "./Main";
+import Navbar from "./Components/Navbar/Navbar";
+import { Projects } from "./Components/Projects/Projects";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React with rakesh
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" exact element={<Main />} />
+          <Route path="/projects" exact element={<Projects />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
